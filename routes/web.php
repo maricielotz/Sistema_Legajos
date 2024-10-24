@@ -41,6 +41,8 @@ Route::middleware('auth')->group(function () {
         Route::post('/usuarios/buscar', [LegajoController::class, 'buscarUsuarios'])->name('usuarios.buscar.submit');
 
     });
+
+
     // Dashboard para otros usuarios
     Route::get('/user/dashboard', [DashboardController::class, 'userDashboard'])->name('user.dashboard');
     // Rutas para el usuario :D sin proteccion xd

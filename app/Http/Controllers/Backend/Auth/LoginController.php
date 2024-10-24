@@ -16,7 +16,9 @@ class LoginController extends Controller
 
     // Procesar el inicio de sesión
     public function login(Request $request)
-    {
+    {   
+
+        //SELECT *
         $request->validate([
             'nombre_usuario' => 'required|string',
             'password' => 'required|string',

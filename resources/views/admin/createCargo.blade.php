@@ -15,6 +15,7 @@
 @section('crear_cargo', 'active')
 @section('title', 'Crear Cargo')
 @section('titulo_navbar','Crear Cargo')
+
 @section('admin-content')
     
 

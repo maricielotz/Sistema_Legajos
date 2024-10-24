@@ -9,6 +9,7 @@
 
     <!-- ACA VA EL PARTIAL DE LOS ESTILOS :D -->
     @include('layouts.partials.styles')
+    
 </head>
 
 <body>

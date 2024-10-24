@@ -15,6 +15,7 @@
 @section('actualizar_legajo', 'active')
 @section('titulo_navbar','Actualizar Legajo')
 @section('title', 'Actualizar legajo')
+
 @section('admin-content')
 @if (session('success'))
     <div class="alert alert-success">{{ session('success') }}</div>

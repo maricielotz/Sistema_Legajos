@@ -14,7 +14,7 @@
 @section('empleados_show', 'show')
 @section('crear_empleado', 'active')
 @section('title', 'Registrar Usuarios')
-@section('titulo_navbar','Registrar Usuario')
+@section('titulo_navbar','Registrar ')
 
 @section('admin-content')
 <div class="container">

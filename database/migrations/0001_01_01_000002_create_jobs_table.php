@@ -7,8 +7,10 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations. eloquence
      */
+
+     
     public function up(): void
     {
         Schema::create('jobs', function (Blueprint $table) {

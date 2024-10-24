@@ -11,6 +11,13 @@ return new class extends Migration
         //MIGRACION DE USUARIOS IZI
         //ASI COMO ESTA FUNCIONA BIEN CON ESAS LLAVES XD
         //PUEDES CAMBIARLA A UNA LOGICA MEJOR PERO CREO QUE FUNCIONA BIEN SOLO QUE MAS CHAMBA
+
+        //------------------------------------------
+        //------------------------------------------
+        //LARAVEL USA ELOQUENCE OJITO OJITIIOOOOOOO
+
+        
+
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('dni', 20)->unique();
