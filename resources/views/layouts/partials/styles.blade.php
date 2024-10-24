@@ -10,6 +10,7 @@
 <!-- css para las alertas -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" type="text/css" media="all">
 <!-- others css -->
+
 <link rel="stylesheet" href="{{ asset('backend/assets/css/typography.css') }}" >
 <link rel="stylesheet" href="{{ asset('backend/assets/css/default-css.css') }}" >
 <link rel="stylesheet" href="{{ asset('backend/assets/css/styles.css') }}" >
