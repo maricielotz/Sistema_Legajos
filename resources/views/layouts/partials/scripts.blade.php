@@ -7,7 +7,9 @@
     <script src="{{ asset('backend/assets/js/metisMenu.min.js') }}" ></script>
     <script src="{{ asset('backend/assets/js/jquery.slimscroll.min.js') }}" ></script>
     <script src="{{ asset('backend/assets/js/jquery.slicknav.min.js') }}" ></script>
-
+    <!-- SCRIPT PARA ALERTAS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     <!-- start chart js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" ></script>
     <!-- start highcharts js -->

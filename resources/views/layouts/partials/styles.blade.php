@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="{{ asset('backend/assets/css/slicknav.min.css') }}" >
 <!-- amchart css -->
 <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<!-- css para las alertas -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" type="text/css" media="all">
 <!-- others css -->
 <link rel="stylesheet" href="{{ asset('backend/assets/css/typography.css') }}" >
 <link rel="stylesheet" href="{{ asset('backend/assets/css/default-css.css') }}" >

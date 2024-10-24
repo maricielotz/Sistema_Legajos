@@ -23,10 +23,19 @@
 
 <!-- ESTO SE PUEDE EDITAR PARA QUE LA ALERTA SEA UN POP UP XD -->
 @if(session('success'))
-<div class="alert alert-success">
-    {{ session('success') }}
-</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        Swal.fire({
+            icon: 'success',
+            title: 'Éxito',
+            text: '{{ session('success') }}',
+            confirmButtonText: 'Aceptar'
+        });
+    });
+</script>
 @endif
+
+
 
 @section('dashboard_active', 'active')
 
