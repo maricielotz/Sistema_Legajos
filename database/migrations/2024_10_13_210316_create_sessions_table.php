@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('last_activity');
             $table->string('ip_address')->nullable(); 
             $table->text('user_agent')->nullable(); 
+            $table->timestamps();
         });
     }
 

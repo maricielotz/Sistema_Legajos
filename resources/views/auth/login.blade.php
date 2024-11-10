@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
-    @extends('layouts.partials.styles')
+    @include('layouts.partials.styles')
 
 </head>
 <body>
@@ -60,5 +60,5 @@
         </div>
     </div>
 </body>
-    @extends('layouts.partials.scripts')
+    @include('layouts.partials.scripts')
 </html>
