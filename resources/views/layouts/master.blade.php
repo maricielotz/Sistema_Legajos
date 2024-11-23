@@ -7,7 +7,7 @@
     <title>@yield('title', 'Sistema de legajos')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- ACA VA EL PARTIAL DE LOS ESTILOS :D -->
+    <!-- ACA VA EL PARTIAL DE LOS ESTILOS -->
     @include('layouts.partials.styles')
     
 </head>
@@ -24,7 +24,8 @@
     <!-- page container area start -->
     <div class="page-container">
 
-        <!--ACA VVA EL PARTIAAL DEL SIDEBAR LA BARRITA DEL COSTADO FEA ES UN IF PORQUE EL PARTIAL DEL USER ES DIFERENTE AL PARTIAL DEL ADMIN :D :D-->
+        <!--ACA VA EL PARTIAAL DEL SIDEBAR LA BARRITA DEL COSTADO ES UN IF PORQUE EL PARTIAL DEL USER ES DIFERENTE AL PARTIAL DEL ADMIN -->
+        <!--ASI LO ENTENDI -->
 
         @if(Auth::user()->rol_id == 1)
             @include('layouts.partials.sidebar')
@@ -48,7 +49,7 @@
         <!-- main content area end -->
 
 
-        <!-- ACA VA EL PARTIAL DE LOS ESTILOS :D -->
+        <!-- ACA VA EL PARTIAL DE LOS ESTILOS x2 -->
         @include('layouts.partials.footer')
 
        

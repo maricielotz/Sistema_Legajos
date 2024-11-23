@@ -9,10 +9,10 @@ return new class extends Migration
     public function up(): void
     {
 
-        //100% CREADO POR CHATGPT
+        //UN DETALLITO 
         //NO SE COMO FUNCIONARA LA LOGICA DE ESTA TABLA XD
         //NO SE COMO MENEJA LA GESTION DE ARCHIVOS LARAVEL 
-        //TENGO MIEDO
+        //CREO QUE ESTO TE TOCA SANDRO, ASI QUE NOS EXPLICAS JAJA
         
         Schema::create('documentos', function (Blueprint $table) {
             $table->id();

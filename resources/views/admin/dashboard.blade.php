@@ -21,7 +21,7 @@
 @section('admin-content')
 
 
-<!-- ESTO SE PUEDE EDITAR PARA QUE LA ALERTA SEA UN POP UP XD -->
+<!-- ALERTA SEA UN POP UP -->
 @if(session('success'))
 <script>
     document.addEventListener("DOMContentLoaded", function() {

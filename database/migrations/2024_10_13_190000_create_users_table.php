@@ -8,13 +8,13 @@ return new class extends Migration
 {
     public function up(): void
     {
-        //MIGRACION DE USUARIOS IZI
-        //ASI COMO ESTA FUNCIONA BIEN CON ESAS LLAVES XD
-        //PUEDES CAMBIARLA A UNA LOGICA MEJOR PERO CREO QUE FUNCIONA BIEN SOLO QUE MAS CHAMBA
+        //MIGRACION DE USUARIOS SENCILLITO
+        //ASI COMO ESTA FUNCIONA BIEN CON ESAS LLAVES, ASI QUE NO LE MOVAMOS
+        //PODEMOS CAMBIAR A UNA LOGICA MEJOR PERO CREO QUE FUNCIONA BIEN SOLO QUE MAS CHAMBA
 
         //------------------------------------------
         //------------------------------------------
-        //LARAVEL USA ELOQUENCE OJITO OJITIIOOOOOOO
+        //LARAVEL USA ELOQUENCE OJITO OJITOOOOOOO
 
         
 

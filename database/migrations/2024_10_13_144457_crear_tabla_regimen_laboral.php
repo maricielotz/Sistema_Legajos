@@ -9,9 +9,10 @@ return new class extends Migration
     public function up(): void
     {
         //MIGRACION PARA REGIMEN_LABORAL
-        //EN PERU EXISTEN COMO 40000 REGIMENES LABORALES
-        //IGUAL QUE CON CARGO -  SI LE VAS A AUMENTAR REGIMENES TIENES QUE HACER UN NUEVO FORMULARIO
+        //AQUI ENTRARIA LO DE LA LEY QUE NOS DIJO EL PROFE? MIENTRAS TANTO BUSCA SANDRO XD
+        //IGUAL QUE CON CARGO -  SE HACE UN NUEVO FORMULARIO 
         //PORQUE ESTO ES LLAVE DE USERS SORRY XD MALA LOGICA O TAL VEZ NO(?)
+        //AQUI ESTAMOS PARA COMPLICARNOS JAJAJAJ
         
         Schema::create('regimen_laboral', function (Blueprint $table) {
             $table->id();

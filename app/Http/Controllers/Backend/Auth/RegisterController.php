@@ -24,7 +24,7 @@ class RegisterController extends Controller
 
     public function register(Request $request)
     {
-        //VALIDAMOS LOS DATOS, PUEDES CAMBIARLO COMO QUIERAS EN REALIDAD SOLO SON VALIDACIONES
+        //VALIDAMOS LOS DATOS, SE PUEDE CAMBIAR COMO SEA SOLO SON VALIDACIONES
         $request->validate([
             'dni' => 'required|string|max:20|unique:users',
             'nombre' => 'required|string|max:100',

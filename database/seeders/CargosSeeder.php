@@ -14,8 +14,12 @@ class CargosSeeder extends Seeder
     public function run(): void
     {
         DB::table('cargo_laboral')->insert([
-            ['nombre' => 'Ingeniero de chistemas', 'descripcion' => 'Experto en contar chistes'],
-            ['nombre' => 'Abogato', 'descripcion' => 'Que hace un abogato'],
+            ['nombre' => 'Ingeniero de sistemas', 'descripcion' => 'Experto en hardware y software'],
+            ['nombre' => 'Abogado', 'descripcion' => 'Experto en salvarnos de las demandas'],
+            ['nombre' => 'Administrador', 'descripcion' => 'Especialista en administrar el presupuesto'],
+            ['nombre' => 'Ingeniero estadistico', 'descripcion' => 'Experto en analisis'],
+            ['nombre' => 'RR.HH', 'descripcion' => 'Expertos en llenarse de docuemtnacion'],
+
         ]);
     
     }

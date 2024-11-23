@@ -2,19 +2,33 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro de Legajo Exitoso</title>
+    <title>Legajo - {{ $usuarioInfo['nombre'] }} {{ $usuarioInfo['apellido'] }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .info {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Registro de Legajo Exitoso</h1>
-    <p>Nombre: {{ $user->nombre }}</p>
-    <p>Apellido: {{ $user->apellido }}</p>
-    <p>DNI: {{ $user->dni }}</p>
-    <p>Cargo: {{ $user->cargo }}</p>
-    <p>Teléfono: {{ $user->telefono }}</p>
-    <p>Régimen Laboral: {{ $user->regimen_laboral }}</p>
-    <p>Código de Empleado: {{ $user->codigo_empleado }}</p>
-    <p>Fecha de Inicio: {{ $user->fecha_inicio }}</p>
-    <p>Fin de Contrato: {{ $user->fin_contrato }}</p>
-    <p>Código del Legajo: {{ $legajo->codigo_legajo }}</p>
-    <p>Fecha de Registro: {{ now()->format('d/m/Y H:i') }}</p>
+
+    <h1>Legajo de Usuario</h1>
+    <div class="info">
+        <p><strong>Nombre:</strong> {{ $usuarioInfo['nombre'] }} {{ $usuarioInfo['apellido'] }}</p>
+        <p><strong>DNI:</strong> {{ $usuarioInfo['dni'] }}</p>
+        <p><strong>Cargo:</strong> {{ $usuarioInfo['cargo_laboral'] }}</p>
+        <p><strong>Descripción del Cargo:</strong> {{ $usuarioInfo['descripcion_cargo'] }}</p>
+        <p><strong>Régimen Laboral:</strong> {{ $usuarioInfo['regimen_laboral'] }}</p>
+        <p><strong>Fecha de Inicio Laboral:</strong> {{ $usuarioInfo['fecha_inicio_laboral'] }}</p>
+        <p><strong>Fecha de Fin de Contrato:</strong> {{ $usuarioInfo['fecha_fin_contrato'] }}</p>
+        <p><strong>Número de Expediente:</strong> {{ $usuarioInfo['numero_expediente'] }}</p>
+    </div>
+
 </body>
+</html>

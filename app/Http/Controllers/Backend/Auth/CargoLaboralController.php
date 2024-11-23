@@ -13,8 +13,8 @@ class CargoLaboralController extends Controller
     {
         return view('admin.createCargo'); 
     }
-    //CON ESTO VALIDAS LOS DATOS Y GUARDAS EN TU BASE DE DATOS EL CARGO_LABORAL
-    //EN SI TODO SE RELACIONA CON EL MODELO CargoLaboral
+    //CON ESTO VALIDAMOS LOS DATOS Y SE GUARDA EN LA BASE DE DATOS EL CARGO_LABORAL
+    //EN SI TODO SE RELACIONA CON EL MODELO DE CargoLaboral by Sandro
     public function store(Request $request)
     {   
         //VALIDAR :D

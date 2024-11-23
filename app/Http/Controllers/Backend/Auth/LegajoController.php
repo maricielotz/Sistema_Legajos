@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Backend\Auth;
 /**
- * ACA SI ESTA LO BRUTAL ESTAN TODAS LAS FUNCIONES PARA MANIPULAR EL LEGAJO, CREAR, ACTUALIZAR, LEER, TODO 
- * 
+ * ACA SI ESTA LO BRUTAL ESTAN TODAS LAS FUNCIONES PARA MANIPULAR EL LEGAJO, CREAR, ACTUALIZAR, LEER, ETC ETC ETC
+ * BUENO AHI DICE CONTROLADOR NO? 
  */
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -20,17 +20,17 @@ class LegajoController extends Controller
         return view('admin.create_legajo');
     }
     //FUNCION PARA BUSCAR USUARIO POR DNI
-    //OJO XD ESTOY BUSCANDO POR DNI PORQUE ES MAS FACIL Y ME PARECE LO CORRECTO Y LA MEJOR OPCION
+    //OJO OJITO ESTOY BUSCANDO POR DNI PORQUE ES MAS FACIL Y ME PARECE LO CORRECTO Y LA MEJOR OPCION
     public function buscarUsuario(Request $request)
     {
-        //VALIDAAAAAAAA XD QUE SEA UN STRING :V 
+        //VALIDAAAAAAAA STRING POR SER DNI CLARO QUE SI
         $request->validate([
             'dni' => 'required|string',
         ]);
         
-        //BUSCA POR DNIS
+        //BUSCA POR DNI
         $usuario = User::where('dni', $request->dni)->first();
-        //NO HAY USUARIO XD
+        // A PEDIDO DE SANDRO NOTIFICACION POR SI NO HAY USUARIO
         if (!$usuario) {
             return back()->withErrors(['dni' => 'No se encontró un usuario con el DNI proporcionado.']);
         }
@@ -39,8 +39,8 @@ class LegajoController extends Controller
         $legajoExistente = Documento::where('usuario_id', $usuario->id)->first();
         
         if ($legajoExistente) {
-            //EL USUARIO YA TIENE UN LEGAJO ENTONCES NO VAMOS MEJOR ACTUALIZAMOS
-            //PORQUE HAY UN PROBLEMITA CON EL CODIGO DE LEGAJO ESA VAINA
+            //EL USUARIO YA TIENE UN LEGAJO ENTONCES MEJOR ACTUALIZAMOS
+            //PORQUE HAY UN PROBLEMITA CON EL CODIGO DE LEGAJO... PERO ESO YA LO ESTAREMOS VIENDO
             return redirect()->route('admin.legajo.update.form', $legajoExistente->id)
                 ->with('success', 'Este usuario ya tiene un legajo registrado. Tiene que actualizarlo');
         }
@@ -63,14 +63,14 @@ class LegajoController extends Controller
     
     
     
-    //ESTO ES PARA GUARDAR EL LEGAJO EN SI ES UN ARCHIVITO PDF NOMA QUE NO PESE MAS DE DOS MEGAS
+    //ESTO ES PARA GUARDAR EL LEGAJO EN SI ES UN ARCHIVITO PDF NOMA QUE NO PESA MAS DE DOS MEGAS
     public function store(Request $request)
     {   
-        //IGUAL PRIMERO VALIDAMOS QUE EXISTA EL USUARIO NO XD 
+        //IGUAL PRIMERO VALIDAMOS QUE EXISTA EL USUARIO XD 
         $request->validate([
             'usuario_id' => 'required|exists:users,id',
             'numero_expediente' => 'required|string|max:50|unique:documentos',
-            //LE PUEDES PONER UN TAMAÑO MAXIMO EN MEGABITS ACA ESTA EN 2 MB
+            //LE PODEMOS PONER UN TAMAÑO MAXIMO EN MEGABITS ACA ESTA EN 2 MB
             'archivo' => 'required|file|mimes:pdf|max:2048', 
         ]);
 
@@ -94,8 +94,9 @@ class LegajoController extends Controller
 
     public function buscarUsuarioParaActualizar(Request $request)
     {   
-        //PARA ACTUALIZAR IGUAL NOMA PRIMERO HAY QUE BUSCAR, POR DNI XD 
-        //SE PUEDE BUSCAR POR LO QUE QUIERAS EN REALIDAD BUSCAR POR ID SERIA MEJOR :V (CREO) PERO SON COSITAS
+        //PARA ACTUALIZAR LO MISMO, LA BUSQUEDA ES POR DNI
+        //SE PUEDE BUSCAR POR CUALQUIER DATO EN REALIDAD AUNQUE BUSCAR POR ID SERIA MEJOR (CREO) 
+        // PERO POR DNI POR QUE ES MI MODULO Y CADA QUIEN LO SUYO XD
         $request->validate([
             'dni' => 'required|string',
         ]);
@@ -127,11 +128,11 @@ class LegajoController extends Controller
             'numero_expediente' => $legajo->numero_expediente, 
             'nombre_archivo' => $legajo->nombre_archivo,
         ];
-        //SI TE FIJAS XD ES IGUAL NOMA QUE EL OTRO :V EL PROBLEMA ES QUE ESTE RETORNA OTRA VISTA
-        //TAL VEZ  SE PUEDA OSEA ESTOY CASI SEGURO QUE SE PUEDE RETORNAR DOS VISTAS, PERO ME DA FLOJERA BUSCAR LA DOCUMENTACION
+        //ESTE ES IGUAL QUE EL OTRO EL PROBLEMA ES QUE ESTE RETORNA OTRA VISTA
+        //CREO QUE PUEDE RETORNAR DOS VISTAS CREO REVISEN LA DOCUMENTACION
         return view('admin.update_legajo', compact('usuario', 'usuarioInfo', 'legajo'));
     }
-    //FUNCION PARA ACTUALIZAR NOMA
+    //FUNCION PARA ACTUALIZAR - GABRIEL
     public function actualizarLegajo(Request $request)
     {
         $request->validate([
@@ -148,7 +149,7 @@ class LegajoController extends Controller
         $usuario = User::find($request->usuario_id);
         $legajo = Documento::where('usuario_id', $usuario->id)->first();
 
-        // ACTUALIZAR LE PUEDES METER LO QUE QUIERAS 
+        // AL ACTUALIZAR SE PUEDE HACER AGREGAR VARIAS COSITAS
         $usuario->update([
             'nombre' => $request->nombre,
             'apellido' => $request->apellido,
@@ -174,7 +175,7 @@ class LegajoController extends Controller
         return redirect()->route('admin.dashboard')->with('success', 'Legajo actualizado exitosamente.');
     }
     
-    //ACA COMIENZAN LAS BUSQUEDAS
+    //ACA COMIENZAN LAS BUSQUEDAS BY GABRIEL
     public function mostrarBusqueda()
     {
         
@@ -184,7 +185,7 @@ class LegajoController extends Controller
         return view('admin.buscar_usuarios', compact('cargos', 'regimenes'));
     }
     
-    //ACA FILTRAS O BUSCAS
+    // 
     public function buscarUsuarios(Request $request)
     {
         $query = User::query();

@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         //LA MIGRACION PARA CREAR LA TABLA ROLES 
-        //MI RECOMENDACION 2 ROLES
         //ADMINISTRADOR - 1
         //PERSONAL - 2
+        //SENCILLITO PARA EVITAR LA FATIGA
         Schema::create('roles', function (Blueprint $table) {
             $table->id(); 
             $table->string('nombre', 50)->unique(); 

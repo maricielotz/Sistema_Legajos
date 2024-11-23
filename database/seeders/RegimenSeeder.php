@@ -14,8 +14,8 @@ class RegimenSeeder extends Seeder
     public function run(): void
     {
         DB::table('regimen_laboral')->insert([
-            ['nombre' => 'nombrado', 'descripcion' => 'Esclavo a tiempo completo'],
-            ['nombre' => 'contratado', 'descripcion' => 'De chill'],
+            ['nombre' => 'nombrado', 'descripcion' => 'Personal a tiempo completo'],
+            ['nombre' => 'contratado', 'descripcion' => 'Personal con un tiempo especifico'],
         ]);
     }
 }

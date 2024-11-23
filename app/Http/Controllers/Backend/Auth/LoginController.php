@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    //ESTA FUNCION SOLO MUESTRA EL FORMULARIO DEL INICIO
+    //ESTA FUNCION MUESTRA SOLO EL FORMULARIO DEL INICIO
     public function showLoginForm()
     {
         return view('auth.login'); 
@@ -24,7 +24,7 @@ class LoginController extends Controller
             'password' => 'required|string',
         ]);
 
-        //ACA ESTAS AUTENTICANDO, SOLO COMPARAS SI LO QUE INGRESASTE ESTA EN TU BASE DE DATOS
+        //AQUI SOLO AUTENTICA, COMPARA LO QUE SE INGRESE EN LA BASE DE DATOS
         if (Auth::attempt(['nombre_usuario' => $request->nombre_usuario, 'password' => $request->password])) {
             return redirect()->route('admin.dashboard');
         }

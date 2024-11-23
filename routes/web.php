@@ -1,6 +1,8 @@
 <?php
 
-//TIENES QUE IMPORTAR TODOS LOS CONTROLADORES DE LAS VISTAS ESTO ES FEO :V
+//IMPORTA TODOS LOS CONTROLADORES DE LAS VISTAS
+// ESTA PARTECITA POR SI NOS OLVIDAMOS ES COMPLICADA XD
+// DIOSITO PROTEGENOS 
 use App\Http\Controllers\Backend\Auth\LoginController;
 use App\Http\Controllers\Backend\Auth\DashboardController;
 use App\Http\Controllers\Backend\Auth\RegisterController;
@@ -26,7 +28,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/cargos/create', [CargoLaboralController::class, 'create'])->name('cargos.create');
         Route::post('/cargos', [CargoLaboralController::class, 'store'])->name('cargos.store');
         
-        // RUTAS PARA LOS LEGAJOS OH SEÑOR CHAT GPT PROTEGEME
+        // RUTAS PARA LOS LEGAJOS OH SEÑOR PROTEGEME
         Route::get('/legajos/create', [LegajoController::class, 'create'])->name('legajos.create');
         Route::post('/legajos/store', [LegajoController::class, 'store'])->name('legajos.store');
         Route::post('/legajos/buscar', [LegajoController::class, 'buscarUsuario'])->name('legajos.buscar');
@@ -36,7 +38,7 @@ Route::middleware('auth')->group(function () {
         Route::post('/legajo/buscar', [LegajoController::class, 'buscarUsuarioParaActualizar'])->name('legajo.buscar.update');
         Route::post('/legajo/actualizar', [LegajoController::class, 'actualizarLegajo'])->name('legajo.update');
 
-        // rutas buscar y filtrar(?)
+        // rutas buscar y filtrar
         Route::get('/usuarios/buscar', [LegajoController::class, 'mostrarBusqueda'])->name('usuarios.buscar');
         Route::post('/usuarios/buscar', [LegajoController::class, 'buscarUsuarios'])->name('usuarios.buscar.submit');
 
@@ -46,6 +48,7 @@ Route::middleware('auth')->group(function () {
     // Dashboard para otros usuarios
     Route::get('/user/dashboard', [DashboardController::class, 'userDashboard'])->name('user.dashboard');
     // Rutas para el usuario :D sin proteccion xd
+    // AHORA QUE LO PIENSO PODEMOS AGREGAR COMO MEJORA LA SEGURIDAD QUE DICEN?
     Route::get('/user/legajo/create', [LegajoController::class, 'createLegajo'])->name('legajo.create');
     Route::post('/user/legajo/store', [LegajoController::class, 'storeLegajo'])->name('legajo.store');
     Route::put('/user/legajo/{legajo}', [LegajoController::class, 'actualizarLegajoUsers'])->name('legajo.update');

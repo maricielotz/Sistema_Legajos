@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    //ACA ELEGIMOS A QUE DASHBOARD REDIRECCIONARA, EN SI ESTO FUNCIONA CON UN MIDDLEWARE PARA LA AUTENTICACION
-    
-    //DASHBOAR DEL ADMIN
+    //DICCIONARIO A LA MANO MUCHACHOS 
+    //ACA ELEGIMOS A QUE DASHBOARD REDIRECCIONARA, FUNCIONA CON UN MIDDLEWARE PARA LA AUTENTICACION
+    //DASHBOARD DEL ADMIN TODO PODEROSO
     public function adminDashboard()
     {
-        //return view('layouts.master'); 
+        //return view('layouts.master');
         return view('admin.dashboard'); 
     }
     

@@ -19,7 +19,7 @@ class Documento extends Model
         'numero_expediente',
     ];
 
-    //LAVE DE USERS 
+    //LLAVE DE USERS 
     public function users()
     {
         return $this->belongsTo(User::class);

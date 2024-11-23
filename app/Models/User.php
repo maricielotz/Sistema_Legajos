@@ -41,7 +41,7 @@ class User extends Authenticatable
         ];
     }
     
-    //HAY QUE PONER LAS RELACIONES SI NO VA A MORIR EL PROGRAMITA XD
+    //HAY QUE PONER LAS RELACIONES SI NO VA A MORIR EL PROGRAMITA :c
     //ESTA PARTE SI ES IMPORTANTE PARA LAS CONSULTAS
     // Relación con el modelo CargoLaboral
     public function cargoLaboral()

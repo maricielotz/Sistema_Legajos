@@ -21,7 +21,7 @@
                 <form action="{{ route('login.submit') }}" method="POST">
                     <div class="login-form-head">
                         <h4>INICIO DE SESION</h4>
-                        <p>BUENAS TARDES INICIE SESION :D</p>
+                        <p>Inicie sesion</p>
                     </div>
                     <div class="login-form-body">
                         
